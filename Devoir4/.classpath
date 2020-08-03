@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="JavaCode/PartI/8-Queen Problem HC"/>
+	<classpathentry kind="src" path="JavaCode/PartII/Twolock-queue"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

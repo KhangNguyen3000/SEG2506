@@ -1,0 +1,21 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Forbidden combination of elements</title>
+</head>
+
+<body>
+
+<p><u>Forbidden combination of elements</u></p>
+<p>Not all possible combination of elements are allowed in HISim implementation of Hybrid Petri nets. In particular, the following combinations are forbidden:</p>
+<ul>
+  <li>A discrete place connected with a continuous transition via a normal arc, either as input or as output. This could potentially leave the discrete place with a non-integer marking as a result of the firing of the continuous transition.</li><img border="0" src="HISIM%20images/forbidden%20combination1.png"><p></p>
+  <li>A continuous place connected with a continuous transition via an inhibitory arc. Weights in arcs connecting continuous places and transitions do not act as thresholds like in the discrete case, but only as multipliers of the continuous amounts transferred. Therefore it wouldn't make sense to allow an inhibitory arc connecting a continuous place and transition, which would work in a threshold manner.</li><img border="0" src="HISIM%20images/forbidden%20combination2.png"><p></p>
+  <li>A test or inhibitory input arc to a place. The semantic of these types of arcs is associated with transitions and it doesn't make sense to use them with places.</li>
+</ul>
+<p>HISIm checks the structure of the Petri net before switching to Simulation mode, and if any forbidden combination of elements is found, you won't be allowed to get into Simulation mode. A pop-up window will be displayed showing an error for every faulty combination found; by selecting the corresponding entry in the list, the forbidden arc will be highlighted in the editor. When closing the pop-up window, HISim will switch back to Draw mode so that the forbidden combinations can be corrected.</p>
+
+</body>
+
+</html>

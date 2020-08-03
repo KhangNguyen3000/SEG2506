@@ -1,0 +1,28 @@
+<html">
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>Handle arcs</title>
+</head>
+
+<body>
+
+<p><u>Handle Arcs</u></p>
+<p>HISim implements two extra type of arcs besides the regular -resource- arcs:</p>
+<ul>
+  <li>Test arcs: the basic functioning is as follows; if a test arc connects a certain place with a discrete transition, the place's marking will be compared with the arc weight for the place's enabling as if it was a regular arc, but when the transition fires, no tokens -or continuous amout- will be removed from the input place. On the other hand, if a test arc is connected to a continuous transition, the input place's marking can be used as a variable in the transition's firing function, but the arc will have no effect otherwise. Test arcs can't create conflicts.</li>
+  <li>Inhibitory arcs: the functioning is similar to a test arc in that they are used for enabling purposes but not for token or continuous amount flow. If the marking of the corresponding input place is greater or equal than the arc wegight, then the transition won't be enabled.</li>
+</ul>
+<p>To add an arc you can click on this <img border="0" src="HISIM%20images/handle%20arcs.png" width="27" height="27">&nbsp;icon in the toolbar. An arc can be directed from a place to a transition and visa-versa by left clicking the corresponding place and transition. A arc may have angles by clicking at any intermediate point between the place and the transition. If the shift key is hold at the same time the arc will be appear in a shape of a curve instead in a shape of an angle.</p>
+&nbsp;</p>
+<p><p>To change the type of an arc or other properties, you can right click on it and then select an option in the pop-up menu.</p></p>
+
+<p><br>
+<br>
+&nbsp;</p>
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects version="9620" language="sdl" diagramType="prcs">
+<Signal id="SIG1" name="sReady">
+<UsingSymbols>
+<SymbolReference symbolId="SYM6" usingKind="output"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG2" name="sGetId">
+<UsingSymbols>
+<SymbolReference symbolId="SYM13" usingKind="input"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG3" name="sId">
+<UsingSymbols>
+<SymbolReference symbolId="SYM36" usingKind="output"/>
+</UsingSymbols>
+</Signal>
+<Signal id="SIG4" name="sError">
+<UsingSymbols>
+<SymbolReference symbolId="SYM35" usingKind="output"/>
+</UsingSymbols>
+</Signal>
+<Item id="ITEM1" type="process" name="pCentral" scope="current" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<Body>
+<SentSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG2"/>
+</ReceivedSignals>
+</Body>
+</Item>
+<Item id="ITEM10" type="variable" name="index" parentId="ITEM1" scope="none" variableTypeName="INTEGER" variableTypeId="ITEM5" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="2,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM11" type="variable" name="phoneNumber" parentId="ITEM1" scope="none" variableTypeName="INTEGER" variableTypeId="ITEM5" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="1,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM12" type="variable" name="pLocals" parentId="ITEM1" scope="none" variableTypeName="pLocalArray" variableTypeId="ITEM3" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM1" positions="3,0"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM13" type="connector" name="RTDS_label1" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM3"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYM11"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM14" type="state" name="Idle" parentId="ITEM1" scope="none" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYM12"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYM22"/>
+<SymbolReference symbolId="SYM7"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM15" type="process" name="pLocal" scope="block" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM9"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM2" type="variable" name="index" parentId="ITEM1" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM10"/>
+<SymbolReference symbolId="SYM4"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="type" name="pLocalArray" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="phoneNumber" parentId="ITEM1" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM21"/>
+<SymbolReference symbolId="SYM32"/>
+<SymbolReference symbolId="SYM13"/>
+<SymbolReference symbolId="SYM36"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM5" type="type" name="INTEGER" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM1"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM6" type="variable" name="true" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM33"/>
+<SymbolReference symbolId="SYM8"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM7" type="variable" name="OFFSPRING" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM10"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM8" type="variable" name="false" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM34"/>
+<SymbolReference symbolId="SYM5"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM9" type="variable" name="pLocals" parentId="ITEM1" scope="global" defined="FALSE" anchorItemId="ITEM1" searchPolicy="-1" formalParameterOrder="-" isFormalParam="FALSE" isSyntype="FALSE">
+<UsingSymbols>
+<SymbolReference symbolId="SYM21"/>
+<SymbolReference symbolId="SYM36"/>
+<SymbolReference symbolId="SYM10"/>
+</UsingSymbols>
+</Item>
+</DictionaryObjects>

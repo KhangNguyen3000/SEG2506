@@ -1,0 +1,1 @@
+HISim implementation of Hybrid Petri nets follows -with the additional features of test and inhibitory arcs- Demongondin and Koussoulas' definition of Differential Petri nets. See "Demongodin, I. and Koussoulas, N.T. 1998. Differential Petri Nets: Representing Continuous Systems in a Discrete-Event World. IEEE Transactions on Automatic Control, Vol. 43, No. 4, 573-579".

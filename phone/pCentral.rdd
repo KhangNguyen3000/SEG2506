@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<SdlFSMDiagram language="sdl" type="prcs" is_extract="FALSE" is_temporary="FALSE">
+<SdlFSMPartition name="" needs_cleanup="FALSE">
+<SdlFSMSymbol identifier="SYM1" type="sdlText" text="DCL
+  phoneNumber INTEGER := 102,
+  index INTEGER:=0,
+  pLocals pLocalArray;" outline_color="-" background_color="-" center_coordinates="149 88" dimensions="222 76" attached_symbol_id=""/>
+<NonStateTransition top_left_coordinates="168 219">
+<SdlFSMSymbol identifier="SYM2" type="sdlStart" outline_color="-" background_color="-" center_coordinates="241 234" dimensions="60 30" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM3" type="sdlCnctrIn" text="RTDS_label1" outline_color="-" background_color="-" center_coordinates="241 281" dimensions="146 40" attached_symbol_id=""/>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM4" type="sdlDecision" text="index &lt; 3" outline_color="-" background_color="-" center_coordinates="241 333" dimensions="82 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM5" type="sdlAnswer" text="false" outline_color="-" background_color="-" center_coordinates="241 385" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM6" type="sdlSendSig" text="sReady" outline_color="-" background_color="-" center_coordinates="241 437" dimensions="62 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM7" type="sdlState" text="Idle" outline_color="-" background_color="-" center_coordinates="241 489" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM8" type="sdlAnswer" text="true" outline_color="-" background_color="-" center_coordinates="404 385" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM9" type="sdlPrcsCreation" text="pLocal" outline_color="-" background_color="-" center_coordinates="404 437" dimensions="62 40" attached_symbol_id=""/>
+<SdlFSMSymbol identifier="SYM10" type="sdlTask" text="pLocals(102+index) := OFFSPRING,
+index := index + 1" outline_color="-" background_color="-" center_coordinates="404 493" dimensions="244 48" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+<SdlFSMSymbol identifier="SYM11" type="sdlCnctrOut" text="RTDS_label1" outline_color="-" background_color="-" center_coordinates="241 561" dimensions="96 40" attached_symbol_id=""/>
+</Transition>
+</NonStateTransition>
+<StateTransitionBlock top_left_coordinates="775 222">
+<SdlFSMSymbol identifier="SYM12" type="sdlState" text="Idle" outline_color="-" background_color="-" center_coordinates="922 242" dimensions="60 40" attached_symbol_id=""/>
+<NormalStateTransition>
+<SdlFSMSymbol identifier="SYM13" type="sdlInputSig" text="sGetId(phoneNumber)" outline_color="-" background_color="-" center_coordinates="922 294" dimensions="152 40" attached_symbol_id=""/>
+<Transition>
+<DecisionBlock>
+<SdlFSMSymbol identifier="SYM32" type="sdlDecision" text="phoneNumber &lt; 105 and phoneNumber &gt; 101" outline_color="-" background_color="-" center_coordinates="922 346" dimensions="294 40" attached_symbol_id=""/>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM33" type="sdlAnswer" text="true" outline_color="-" background_color="-" center_coordinates="922 398" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM36" type="sdlSendSig" text="sId(pLocals(phoneNumber)) TO SENDER" outline_color="-" background_color="-" center_coordinates="922 450" dimensions="264 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+<DecisionBranch>
+<SdlFSMSymbol identifier="SYM34" type="sdlAnswer" text="false" outline_color="-" background_color="-" center_coordinates="1130 398" dimensions="60 40" attached_symbol_id=""/>
+<Transition>
+<SdlFSMSymbol identifier="SYM35" type="sdlSendSig" text="sError TO SENDER" outline_color="-" background_color="-" center_coordinates="1130 450" dimensions="134 40" attached_symbol_id=""/>
+</Transition>
+</DecisionBranch>
+</DecisionBlock>
+<SdlFSMSymbol identifier="SYM22" type="sdlState" text="Idle" outline_color="-" background_color="-" center_coordinates="922 514" dimensions="60 40" attached_symbol_id=""/>
+</Transition>
+</NormalStateTransition>
+</StateTransitionBlock>
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.0" bottomMargin="1.0" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE" scaleFactor="1.0"/>
+</SdlFSMPartition>
+<UnifiedPublication partition_index="" name="auto_generated" type="doc" fileName="" scaleFactor="1.0">
+<PublicationOption optionType="autoSelect" optionValue="TRUE"/>
+<ExportedSymbol symbolId="SYM2"/>
+<StyledText>
+</StyledText>
+<StyledText>
+</StyledText>
+</UnifiedPublication>
+<UnifiedPublication partition_index="" name="auto_generated_1" type="doc" fileName="" scaleFactor="1.0">
+<PublicationOption optionType="autoSelect" optionValue="TRUE"/>
+<ExportedSymbol symbolId="SYM13"/>
+<StyledText>
+</StyledText>
+<StyledText>
+</StyledText>
+</UnifiedPublication>
+</SdlFSMDiagram>

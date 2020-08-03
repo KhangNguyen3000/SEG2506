@@ -1,0 +1,14 @@
+/* ---------------- Definitions space ----------------- */
+
+/* ------------------- Rules space -------------------- */
+%%
+^aa(a|b)*$ {printf("Token1: %s\n", yytext);}
+.(aaa). {printf("Token2: %s\n", yytext);}
+.|\n {} // default rule (always include to match all other strings)
+%%
+/* ----------------- User code space ------------------ */
+main()
+{
+yylex();
+return;
+}
